@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">App_UT2_03</string>
+    <string name="NyA">Nombre y apellidos</string>
+    <string name="presupuesto">Presupuesto</string>
+    <string name="destino">¿A que destino quieres ir?</string>
+    <string name="opcPeninsula">Costa peninsular (600€)</string>
+    <string name="opcIslas">Costa insular (900€)</string>
+    <string name="opcInterior">Turismo de interior (520€)</string>
+    <string name="iva">I.V.A.</string>
+    <string name="mostrar">MOSTRAR</string>
+    <string name="PF">Precio final</string>
+</resources>
