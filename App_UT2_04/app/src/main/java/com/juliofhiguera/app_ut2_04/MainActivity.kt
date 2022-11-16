@@ -1,5 +1,6 @@
 package com.juliofhiguera.app_ut2_04
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.juliofhiguera.app_ut2_04.modelo.AnimalAdapter
+import com.juliofhiguera.app_ut2_04.modelo.DetalleAnimalActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,7 +38,16 @@ class MainActivity : AppCompatActivity() {
     }
     private fun onClickAnimal(animal: Animal)
     {
-        Toast.makeText(this, animal.descripcion, Toast.LENGTH_LONG).show()
+        //Esto es para mostrar el mensaje chiquito
+        //Toast.makeText(this, animal.descripcion, Toast.LENGTH_LONG).show()
+
+        //Esto para el detallado
+        //Si casca hay que modificar el AndroidManifest.xml en la carpeta manifest y poner el :
+        // *Click derecho en clase, copy Path, copy reference* donde aparece el nombre de la clase
+        // por si acaso cambiar tambien el true debajo
+        val intent = Intent(applicationContext, DetalleAnimalActivity::class.java)
+        intent.putExtra("animal",animal)
+        startActivity(intent)
     }
 
     private fun dialogoNuevoAnimal()
